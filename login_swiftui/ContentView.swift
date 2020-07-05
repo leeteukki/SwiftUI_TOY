@@ -33,7 +33,7 @@ struct Home :View {
     
     var body: some View {
        
-        ZStack {
+        ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
             ZStack{
                 ZStack(alignment: Alignment(horizontal: .trailing, vertical: .bottom)) {
                                       
@@ -68,7 +68,10 @@ struct Home :View {
                                               .font(.system(size: 25, weight: .bold))
                                               .foregroundColor(Color("Color"))
                                       }.offset(x:-110, y: -50)
-                                      
+                                    
+                    // disable button
+                                        .disabled(signUp ? false : true)
+                    
                                       Button(action: {
                                           
                                           withAnimation(.easeOut) {
@@ -80,7 +83,7 @@ struct Home :View {
                                               .font(.system(size: signUp ? 26 : 25, weight: .bold))
                                               .foregroundColor(.white)
                                       }.offset(x: -30, y: -30)
-                           
+                                        .disabled(signUp ? true : false)
             // Moving View
                     
             //login view
@@ -141,10 +144,76 @@ struct Home :View {
                     
                     
                     
-                }.offset(y: signUp ? -UIScreen.main.bounds.height + (UIScreen.main.bounds.height < 750 ? 100 : 130 ) : 0)
+                }
+                .offset(y: signUp ? -UIScreen.main.bounds.height + (UIScreen.main.bounds.height < 750 ? 100 : 130 ) : 0)
+                .zIndex(1)
                 
-                
-                
+                // signUP
+                VStack(alignment: .leading, spacing: 25){
+                    
+                    Text("singIP")
+                        .font(.system(size: 35, weight: .bold))
+                        .foregroundColor(Color("Color"))
+                    
+                    Text("Username")
+                        .foregroundColor(Color("Color"))
+                        .padding(.top, 10)
+                    
+                    VStack {
+                               
+                            TextField("Username", text: $user)
+                                               
+                            Divider()
+                                .background(Color("Color").opacity(0.5))
+                                           }
+                    
+                    Text("Password")
+                        .foregroundColor(Color("Color"))
+                        .padding(.top, 10)
+                    VStack {
+                        
+                        SecureField("Password", text: $pass)
+                        
+                        Divider()
+                            .background(Color.white.opacity(0.5))
+                    }
+                    
+                    Text("RE_ENTER")
+                        .foregroundColor(Color("Color"))
+                        .padding(.top, 10)
+                    VStack {
+                        
+                        // use separate tx
+                        SecureField("RE_ENTER", text: $rePass)
+                        
+                        Divider()
+                            .background(Color("Color").opacity(0.5))
+                    }
+
+                    
+                    HStack {
+                        
+                        Spacer()
+                        
+                        // login button..
+                        
+                        Button(action: {}) {
+                            Text("Sing UP")
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                                .padding(.vertical)
+                                .padding(.horizontal,45)
+                                .background(Color("Color"))
+                                .clipShape(Capsule())
+                        }
+                        Spacer()
+                        
+                    }
+                    
+                    Spacer(minLength: 0)
+                }
+                .padding(.top,(UIApplication.shared.windows.first?.safeAreaInsets.top)! + 50)
+                .padding()
             }
         }.background(Color.white.edgesIgnoringSafeArea(.all))
         // changing user Interface Style ..
