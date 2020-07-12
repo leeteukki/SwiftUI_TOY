@@ -15,6 +15,7 @@
 		A03F54E024B1AAA30098DED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A03F54DE24B1AAA30098DED6 /* LaunchScreen.storyboard */; };
 		A03F54EB24B1AAA30098DED6 /* login_swiftuiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03F54EA24B1AAA30098DED6 /* login_swiftuiTests.swift */; };
 		A03F54F624B1AAA30098DED6 /* login_swiftuiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03F54F524B1AAA30098DED6 /* login_swiftuiUITests.swift */; };
+		A05010FA24BB160400EEFDF6 /* SecondPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05010F924BB160400EEFDF6 /* SecondPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		A03F54F124B1AAA30098DED6 /* login_swiftuiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = login_swiftuiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03F54F524B1AAA30098DED6 /* login_swiftuiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login_swiftuiUITests.swift; sourceTree = "<group>"; };
 		A03F54F724B1AAA30098DED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A05010F924BB160400EEFDF6 /* SecondPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				A03F54D324B1AAA20098DED6 /* AppDelegate.swift */,
 				A03F54D524B1AAA20098DED6 /* SceneDelegate.swift */,
 				A03F54D724B1AAA20098DED6 /* ContentView.swift */,
+				A05010F924BB160400EEFDF6 /* SecondPage.swift */,
 				A03F54D924B1AAA30098DED6 /* Assets.xcassets */,
 				A03F54DE24B1AAA30098DED6 /* LaunchScreen.storyboard */,
 				A03F54E124B1AAA30098DED6 /* Info.plist */,
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A05010FA24BB160400EEFDF6 /* SecondPage.swift in Sources */,
 				A03F54D424B1AAA20098DED6 /* AppDelegate.swift in Sources */,
 				A03F54D624B1AAA20098DED6 /* SceneDelegate.swift in Sources */,
 				A03F54D824B1AAA20098DED6 /* ContentView.swift in Sources */,
